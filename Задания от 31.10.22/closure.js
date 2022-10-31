@@ -16,8 +16,8 @@ function sum(x) {
     }
 }
 
-
 //3
+
 function randomInteger() {
     let arrayNumber = []
     return function () {
@@ -25,11 +25,11 @@ function randomInteger() {
             return;
         }
         let rand = Math.floor(1 + (Math.random() * 100));
-        for (let i = 0; i < arrayNumber.length; i++) {
-            if (rand === arrayNumber[i]) {
+        arrayNumber.forEach((value, index, array) => {
+            if (rand === array[index]) {
                 return;
             }
-        }
+        })
         arrayNumber.push(rand);
         return rand;
     }
