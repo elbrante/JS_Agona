@@ -20,7 +20,6 @@ function findIntersect(arrOne, arrTwo) {
 function compareNumbers(a, b) {
     return a - b;
 }
-console.log(arr1.sort(compareNumbers))
 
 function binarySearch(value, list) {
     let first = 0;
@@ -78,6 +77,33 @@ const mergeSort = arr => {
     const arrRight = arr.slice(middle);
     return merge(mergeSort(arrLeft), mergeSort(arrRight));
 };
+
+class User {
+
+    constructor(name) {
+        // вызывает сеттер
+        this.name = name;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(value) {
+        if (value.length < 4) {
+            console.log("Имя слишком короткое.");
+            return;
+        }
+        this._name = value;
+    }
+
+}
+
+let user = new User("Иван");
+console.log(user.name); // Иван
+
+user = new User(""); // Имя слишком короткое.
+
 
 
 

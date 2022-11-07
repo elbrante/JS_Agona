@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+<main class="main">
+    <form class="auth">
+        <div class="auth__login">
+            <input type="text" placeholder="Login" class="auth__login input">
+        </div>
+        <div class="auth__pass">
+            <input type="password" class="auth__pass input" id="myInput">
+            <img src="Eye.png" onclick="myFunction()" class="auth__button_pass">
+        </div>
+        <button class="auth__button">
+            ВОЙТИ
+        </button>
+    </form>
+</main>
+
+
+</body>
+</html>
