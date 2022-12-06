@@ -10,7 +10,20 @@ function sumElemArray(array) {
     }
     return sumElem
 }
-//Задание 3
+
+//Задание 3 - исправленное
+function newFindIntersection(arr1, arr2) {
+    let sortArr1 = arr1.filter(x => arr2.indexOf(x) !== -1)
+    let sortArr2 = arr2.filter(x => arr1.indexOf(x) !== -1)
+    if (sortArr1.length < sortArr2.length) {
+        return sortArr1
+    } else {
+        return sortArr2
+    }
+}
+
+
+//Задание 3 - неправильное
 function findIntersect(arrOne, arrTwo) {
     return arrOne.filter(x => arrTwo.includes(x))
 }
@@ -103,7 +116,6 @@ let user = new User("Иван");
 console.log(user.name); // Иван
 
 user = new User(""); // Имя слишком короткое.
-
 
 
 
